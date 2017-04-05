@@ -1,0 +1,6 @@
+---
+- hosts: cassandra
+  become: true
+  roles:
+    - role: cassandra
+      cassandra_hosts: '{{ groups["cassandra"] }}'
